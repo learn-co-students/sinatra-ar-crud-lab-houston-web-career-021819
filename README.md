@@ -97,3 +97,9 @@ make sure the form includes the hidden input tag to change the request from
 `POST` to `DELETE`.
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/sinatra-ar-crud-lab'>Sinatra ActiveRecord CRUD</a> on Learn.co and start learning to code for free.</p>
+
+
+<form method="POST" action="/articles/<%= @articles.id %>">
+    <input type="hidden" name="_method" value="DELETE" />
+    <input type="submit" value="Delete"/>
+</form>
