@@ -1,0 +1,8 @@
+<html>
+    <body>
+        <% @articles.map do | article | %>
+            <p><%= article.title %></p>
+            <p><%= article.content %></p>
+        <% end %>
+    </body>
+</html>

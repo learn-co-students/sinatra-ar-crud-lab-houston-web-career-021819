@@ -1,0 +1,14 @@
+
+
+<form method = "POST" action = "/articles/<%= @article.id %>"> 
+ <input type = "hidden" name="_method" value="PATCH" /> # this is to overrite
+ <p>title: <input type = "text" name = "title" value ="<%= @article.title %>"></input></p>
+ <p>content: <input type = "text" name ="content" value ="<%= @article.content %>"></input></p>
+ <input type="submit" value = "Submit"/>
+</form>   
+
+#### name="article[title]"
+###  name ="article[content]"
+### We are doing name space here because pass all the params directly in the update is confusing
+### the params will now look like a nested hash like this:
+### {"_method" => "PATCH", "article"=>{"title"=>"xxx", "content"=>"xxx"}, "id"=>"xx"}
